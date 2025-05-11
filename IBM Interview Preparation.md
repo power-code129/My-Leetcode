@@ -125,3 +125,32 @@ The maximum number of coins in any box is `2`.
         nums = list(map(int, input().split()))  # list of coin IDs
         solve(nums)
 
+# Explanation of the Code
+
+## `sum_of_digits(n)`:
+This function computes the sum of digits of a given number `n`. It uses a loop to repeatedly add the last digit of `n` (using the modulo operator `%`), and then reduces `n` by dividing it by 10.
+
+## `solve(nums)`:
+- **Low-limit and High-limit Determination**: 
+  It determines the `low-limit` and `high-limit` from the input list `nums`.
+  
+- **Iterating Through the Range**: 
+  It iterates over the range from `low-limit` to `high-limit`, calculating the sum of digits for each number and counting how many coins fall into each "box" (based on the sum of digits).
+
+- **Output**: 
+  Finally, it outputs the maximum number of coins in any box.
+
+## Input/Output:
+
+- The program first reads the number of coins (`N`) and the list of coin IDs from the input.
+- It then computes and prints the maximum number of coins in any box.
+
+## Time Complexity:
+The time complexity is approximately `O(N + M)`, where `N` is the number of elements in `nums` and `M` is the difference between the highest and lowest coin IDs. This is efficient enough for the given constraints (`N <= 10^5` and `nums[i] <= 10^4`).
+
+## Conclusion:
+This solution effectively solves the problem by counting the number of coins in each "box" and then determining which box has the most coins. The implementation is efficient and works within the provided constraints.
+
+
+![image](https://github.com/user-attachments/assets/adc1d434-578f-43f7-9a5b-941170eb3e0a)
+
