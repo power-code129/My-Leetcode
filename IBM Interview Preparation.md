@@ -91,38 +91,37 @@ The maximum number of coins in any box is `2`.
 
     #Enter your code here. Read input from STDIN. Print output to STDOUT
     def sum_of_digits(n):
-    total = 0
-    while n > 0:
-        total += n % 10
-        n //= 10
-    return total
+        total = 0
+        while n > 0:
+            total += n % 10
+            n //= 10
+        return total
 
     def solve(nums):
     # Step 1: Determine the low-limit and high-limit
-    low_limit = min(nums)
-    high_limit = max(nums)
+        low_limit = min(nums)
+        high_limit = max(nums)
 
     # Step 2: Dictionary to count coins in each box
-    box_count = {}
+        box_count = {}
 
     # Step 3: Process each coin ID from low-limit to high-limit
-    for coin_id in range(low_limit, high_limit + 1):
-        digit_sum = sum_of_digits(coin_id)
-        if digit_sum in box_count:
-            box_count[digit_sum] += 1
-        else:
-            box_count[digit_sum] = 1
+        for coin_id in range(low_limit, high_limit + 1):
+            digit_sum = sum_of_digits(coin_id)
+            if digit_sum in box_count:
+                box_count[digit_sum] += 1
+            else:
+                box_count[digit_sum] = 1
 
     # Step 4: Find the maximum number of coins in any box
-    max_coins_in_box = max(box_count.values())
+        max_coins_in_box = max(box_count.values())
     
     # Output the result
-    print(max_coins_in_box)
+        print(max_coins_in_box)
 
     #Input reading and function calling
     if __name__ == "__main__":
-    N = int(input())  # number of elements in nums
-    nums = list(map(int, input().split()))  # list of coin IDs
-
-    solve(nums)
+        N = int(input())  # number of elements in nums
+        nums = list(map(int, input().split()))  # list of coin IDs
+        solve(nums)
 
