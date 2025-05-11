@@ -124,3 +124,7 @@ This solution efficiently calculates the **maximum distance between cars with di
 - Maximizing the distance during each comparison.
 
 Given the constraints, the algorithm is both **correct** and **efficient**, ensuring accurate results even in the worst-case scenarios.
+
+
+**img**
+![image](https://github.com/user-attachments/assets/48df7de1-8810-4f42-a657-c40f7e6239c6)
